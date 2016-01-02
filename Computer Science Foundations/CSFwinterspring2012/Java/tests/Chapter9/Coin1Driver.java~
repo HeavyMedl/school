@@ -1,0 +1,11 @@
+public class Coin1Driver
+{
+  public static void main(String[] args)
+  {
+    Coin1 quarter = new Coin1(0.25, "Quarter");
+    Coin1 dime = new Coin1(0.10, "Dime");
+    Coin1 quarter2 = new Coin1(0.25, "Quarter");
+    
+    System.out.println(quarter.compareTo(dime));
+  }
+}

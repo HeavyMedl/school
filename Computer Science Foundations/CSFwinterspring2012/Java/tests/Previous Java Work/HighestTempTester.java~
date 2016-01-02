@@ -1,0 +1,8 @@
+public class HighestTempTester
+{
+  public static void main(String [] args)
+  {
+    HighestTemperature test = new HighestTemperature();
+    test.highesttemp();
+  }
+}

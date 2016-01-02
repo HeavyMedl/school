@@ -1,0 +1,17 @@
+public class mySequence implements Sequence
+{
+  private int current = 0;
+  int[] values;
+  
+  public boolean hasNext() {
+    return current < values.length;
+  }
+  public int next() {
+    return values[current]++;
+  }
+  
+  public mySequence(int[] vs) {
+    values = vs;
+  }
+}
+  

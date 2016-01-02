@@ -1,0 +1,31 @@
+public class IceCreamCone
+{
+  private int height;
+  private int radius;
+  private int side;
+  
+  public IceCreamCone()
+  {
+    height = 20;
+    radius = 10;
+    side = 20;
+  }
+  
+  public IceCreamCone(int initHeight, int initRadius)
+  {
+    height = initHeight;
+    radius = initRadius;
+  }
+  
+  public double getSurfaceArea()
+  {
+    double surfacearea = PI * radius * side;
+    return surfacearea;
+  }
+  
+  public double getVolume()
+  {
+    double volume = (1/3.0) * PI * radius * radius * height;
+  }
+  
+}

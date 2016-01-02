@@ -1,0 +1,41 @@
+public class BankAccount
+{
+  private double balance;
+  
+  public BankAccount()
+  {
+    balance = 0;
+  }
+  public BankAccount(double initialValue)
+  {
+    balance = initialValue;
+  }
+  
+  
+  public void deposit(double amount)
+  {
+    balance = balance + amount;
+  }
+  public void withdraw(double amount)
+  {
+    balance = balance - amount;
+  }
+  public double getBalance()
+  {
+    return balance;
+  }
+  public void addInterest(double rate)
+  {
+    rate = balance * (rate / 100);
+    balance = balance + rate;
+  }
+  
+  public static void main(String[] args)
+  {
+    BankAccount KurtsChecking = new BankAccount(1000);
+    KurtsChecking.addInterest(100);
+    System.out.println(KurtsChecking.getBalance());
+
+  }
+}
+    

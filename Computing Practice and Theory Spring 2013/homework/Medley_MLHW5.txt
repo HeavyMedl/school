@@ -1,0 +1,37 @@
+Kurt Medley
+Machine Learning HW 5
+5/24/13
+
+1. Fill in the rest of the table for computing the variance for a binomial distribution with p = 0.8 and n = 2.
+
+Xi	| P(x) | XiP(Xi)| Xi - u| (Xi - u)^2
+0	| 0.04 | 0	| -1.6	| 2.56
+1	| 0.32 | 0.32	| -1.28	| 1.63
+2	| 0.64 | 1.28	| 0.4	| 0.16
+
+u = 1.6
+
+2. Find a 90% confidence interval for a normal random variable with sample average = 20 and sample standard deviation = 10, and N = 25. Show your work.
+
+Mean	20
+SD	10
+n	25
+DF	n - 1 = 24
+T	1.71
+
+Confidence Interval = mean - sem, mean + sem
+s = (t * (sd / sqrt(n)))
+s = (1.711 * (10 / sqrt(25)))
+Confidence Interval = (16.578, 23.422)
+
+3. Referring to Figure 6.8b on P. 221, there are six leaf nodes. For the third leaf node, numbering from the left, write a rule that would capture exactly the instances in that leaf node. 
+
+If windy = true and humidity = high then play = yes
+
+4. Explain what a normakized list of attributes is and why normalization is important.
+
+Attributes that are divided into smaller subsets by relationships defined on them.  Normalization ensures data scales with each subset, etc.
+
+5. Give a distance metric between two instances each with 5 binary attributes: a1, .. a5.
+
+sqrt[(a1-a1)^2 + .. + (a5 - a5)^2]

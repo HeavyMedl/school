@@ -1,0 +1,41 @@
+Kurt Medley
+MLHW 2
+
+
+1. The confidence coefficient is the number by which the model will prune a tree by removing a leaf.  Changing the confidence factor to a higher degree forces the model into be more specific before classifying a certain instance.  This may effect the decision points based on the training data set.
+
+2.  Ross Quinlan's ID3 takes the average information value of each potential vertex of a tree and calculates the information gained; which it designates as a value.  It then takes the node with the largest information value gain to form the root of the tree.  It then iteratively applys the same algorithm to each successive tree vertex.
+
+3. Iris-versicolor.  After determining the 5 nearest neighbors: 3 are classified as versicolor and 2 are classified as virginica.
+
+	4.7 - 1.6 - Iris-versicolor
+	4.8 - 1.8 - Iris-versicolor
+	4.8 - 1.8 - Iris-viriginica
+	4.8 - 1.8 - Iris-viriginica
+	4.7 - 1.8 - Iris-versicolor
+
+4. 
+
+	If (petal length >= 2.45 and petal length < 4.45 and petal width >= 1) then Iris Versicolor
+	If (petal length >= 2.45 and petal length < 4.45 and petal width < 1) then Iris Setosa
+	If (petal length >= 4.45 and petal width >= 1.7) then Iris Virginica
+	If (petal length >= 4.45 and petal width < 1.7) then Iris Versicolor
+
+5.
+
+	A. 15
+	B. (50! / 45!) ^ 3
+	C. Every fold seems to produce the same result.  Changing the seed will produce a differnt fold of data.
+	D. Folds 10 - Seed: 0
+
+	a b c <-- classified as
+	3 2 0 | a = Iris-setosa
+	1 2 2 | b = Iris-versicolor
+	0 0 5 | c = Iris-virginica
+
+	Folds 10 - Seed: 1
+	
+	a b c <-- classified as
+	4 1 0 | a = Iris-setosa
+	0 3 2 | b = Iris-versicolor
+	0 0 5 | c = Iris-virginica

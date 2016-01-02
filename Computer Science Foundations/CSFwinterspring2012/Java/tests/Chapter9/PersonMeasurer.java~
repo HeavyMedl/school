@@ -1,0 +1,10 @@
+public class PersonMeasurer implements Measurer
+{
+  public PersonMeasurer(Object anObject)
+  {
+    PersonMeasurer aPerson = (Person) anObject;
+    double height = aPerson.getHeight();
+    String name = aPerson.getName();
+  }
+}
+    

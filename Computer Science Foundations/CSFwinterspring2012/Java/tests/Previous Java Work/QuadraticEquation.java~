@@ -1,0 +1,32 @@
+public class QuadraticEquation
+{
+  private int a;
+  private int b;
+  private int c
+  private int root;
+  
+  public QuadraticEquation(int a1, int b1, int c1)
+  {
+    a = a1;
+    b = b1;
+    c = c1;
+    root = Math.sqrt(b * b - 4 * a * c);
+  }
+  
+  public getSolution1()
+  {
+    double x1 = (-b + root) / (2 * a);
+    return (double) x1;
+  }
+  
+  public getSolution2()
+  {
+    double x2 = (-b - root) / (2 * a);
+    return (double) x2;
+  }
+  
+  public boolean hasSolutions()
+  {
+    return root < 0;
+  }
+}

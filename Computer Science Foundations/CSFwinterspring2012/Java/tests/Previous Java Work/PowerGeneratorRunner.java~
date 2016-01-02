@@ -1,0 +1,8 @@
+public class PowerGeneratorRunner
+{
+  public static void main(String [] args)
+  {
+    PowerGenerator tens = new PowerGenerator(1);
+    System.out.println(tens.nextPower());
+  }
+}

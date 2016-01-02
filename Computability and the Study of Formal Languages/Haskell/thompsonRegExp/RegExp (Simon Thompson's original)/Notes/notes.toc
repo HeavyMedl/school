@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Regular Expressions}{2}
+\contentsline {section}{\numberline {3}Matching regular expressions}{4}
+\contentsline {section}{\numberline {4}Sets}{6}
+\contentsline {section}{\numberline {5}Non-deterministic Finite Automata}{12}
+\contentsline {section}{\numberline {6}Simulating an NFA}{14}
+\contentsline {section}{\numberline {7}Implementing an example}{17}
+\contentsline {section}{\numberline {8}Building NFAs from regular expressions}{18}
+\contentsline {section}{\numberline {9}Deterministic machines}{20}
+\contentsline {section}{\numberline {10}Transforming NFAs to DFAs}{23}
+\contentsline {section}{\numberline {11}Minimising a DFA}{26}
+\contentsline {section}{\numberline {12}Regular definitions}{27}

@@ -1,0 +1,12 @@
+import java.awt.geom.Ellipse2D;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+public class Ellipse
+{
+  public class void main(String[] args)
+  {
+    Ellipse2D.Double ellipse = new Ellipse2D.Double(5,10,20,30);
+    g2.draw(ellipse);
+  }
+}

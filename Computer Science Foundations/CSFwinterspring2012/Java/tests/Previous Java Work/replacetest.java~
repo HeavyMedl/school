@@ -1,0 +1,13 @@
+public class replacetest {
+  public static void main(String [] args);
+  {
+    String greeting = "Hello World!";
+    String river = "Mississippi";
+    
+    System.out.println(greeting);
+    
+    river = river.replace("issipp", "our");
+  }
+}
+    
+    

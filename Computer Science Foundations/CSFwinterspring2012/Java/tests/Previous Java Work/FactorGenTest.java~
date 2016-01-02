@@ -1,0 +1,8 @@
+public class FactorGenTest
+{
+  public static void main(String[] args)
+  {
+    FactorGenerator twelve = new FactorGenerator(12);
+    System.out.println(twelve.nextFactor());
+  }
+}

@@ -1,0 +1,9 @@
+public class UnitConverterTester
+{
+  public static void main(String[] args)
+  {
+    UnitConverter inToft = UnitConverter("in","ft",12);
+    inToft.enterData();
+    System.out.println(inToft.makeConversion());
+  }
+}

@@ -1,0 +1,18 @@
+import java.awt.geom.*;
+
+/** This program tests the methods written added to the Geometry class:
+  * public static double angle(Point2D.Double p, Point2D.Double q): compute the angle of the line.
+  * public static double slope(Point2D.Double p, Point2D.Double q): compute the slope of the line.
+  */
+
+public class LineTest
+{
+  public static void main(String[] args)
+  {
+    Point2D.Double p = new Point2D.Double(1, 1);
+    Point2D.Double q = new Point2D.Double(3, 0);
+    
+    System.out.println("Slope: " + Geometry.slope(p,q));
+    System.out.println("Angle: " + Geometry.angle(p,q));
+  }
+}

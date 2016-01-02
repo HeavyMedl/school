@@ -1,0 +1,44 @@
+public class StringSorter
+{
+  private String string1;
+  private String string2;
+  private String string3;
+  private String first;
+  private String second;
+  private String third;
+  {
+    public StringSorter(String aString1, String aString2, String aString3)
+    {
+      string1 = aString1;
+      string2 = aString2;
+      string3 = aString3;
+    }
+    
+    public String makeSort()
+    {
+      String error;
+      if (string1.compareTo(string2) < 0 && string1.compareTo(string3) < 0;)
+        return first;
+      else if (string1.compareTo(string2) < 0 && string1.compareTo(string3) > 0;)
+        return second;
+      else if (string1.compareTo(string2) > 0 && string1.compareTo(string3) > 0;)
+        return third;
+      else if (string2.compareTo(string1) < 0 && string2.compareTo(string3) < 0;)
+        return first;
+      else if (string2.compareTo(string1) < 0 && string2.compareTo(string3) > 0;)
+        return second;
+      else if (string2.compareTo(string1) > 0 && string2.compareTo(string3) > 0;)
+        return third;
+      else if (string3.compareTo(string2) < 0 && string3.compareTo(string1) < 0;)
+        return first;
+      else if (string3.compareTo(string2) < 0 && string3.compareTo(string1) > 0;)
+        return second;
+      else if (string3.compareTo(string2) > 0 && string3.compareTo(string1) > 0;)
+        return third;
+      else
+        error = "Error";
+    }
+  }
+        
+        
+      

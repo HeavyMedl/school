@@ -1,0 +1,16 @@
+public class UpperCaseLetters
+{
+  public static void main(String[] args)
+  {
+    String kurt = "Hello Kurt!";
+    
+    int upperCaseLetters = 0;
+    for (int i = 0; i < kurt.length(); i++)
+    {
+      char ch = kurt.charAt(i);
+      if (Character.isUpperCase(ch))
+      {
+        upperCaseLetters++;
+      }
+    }
+  }

@@ -1,0 +1,72 @@
+PLD Assignment 5 -- Kurt Medley
+5.1, 5.2, 5.3, 5.5, [5.7], 5.9, 5.14, 5.19
+
+5.1 For your favorite language and compiler (other than Java), list all the basic types supported and their sizes in bytes. 
+	
+Basic types for Haskell include Int, Integer, Float, Double, Bool, Char, etc.
+
+Prelude Data.Int Foreign.Storable> sizeOf (1 :: Int64) 8
+Prelude Data.Int Foreign.Storable> sizeOf (1 :: Int32) 4
+Prelude Data.Int Foreign.Storable> sizeOf (1 :: Int16) 2
+Prelude Data.Int Foreign.Storable> sizeOf (1 :: Int8) 1
+Prelude Data.Int Foreign.Storable> sizeOf (1 :: Int) 4
+Prelude Data.Int Foreign.Storable> sizeOf 'a' 4
+Prelude Data.Int Foreign.Storable> sizeOf True 4
+Prelude Data.Int Foreign.Storable> sizeOf False 4
+Prelude Data.Int Foreign.Storable> sizeOf (5 :: Double) 8
+Prelude Data.Int Foreign.Storable> sizeOf (5 :: Float) 4
+
+5.2 For your favorite langauge that supports a boolean type answer the following question.  Is it convertible to an integer?  Argue based on princples as to qhy this is useful or not.
+
+Haskell supports a Boolean data type with constructors True and False, and so are not represented by 0 or 1.  Although we could derive this meaning by creating our own datatype or class.
+
+
+class TorF'' a where
+        torf :: a -> Bool
+
+instance TorF'' Int where
+        torf 0 = True
+        torf _ = False
+
+If necessary, we can create functions that represent 0 and 1 as binary yes or nos but there isn't much benefit when a predefined Bool (using True and False) is acceptable in most cases.
+
+5.3 Java does not allow nonboolean values for logical tests, unlike other C-like languages.  Argue based on princples as to why this is useful or not.
+
+I would argue that nonboolean values in conditional/logical tests obscures readibility in code.  The assignment operator should (in my opinion) reside outside of conditional tests as this can lead to confusion.
+
+5.5  What is the 32-bit floating point bit representation for 0.2? 0.5? 0.3? 1.0?
+0.2 = 0011 1110 0100 1100 1100 1100 1100 1101
+0.5 = 0011 1111 0000 0000 0000 0000 0000 0000
+0.3 = 0011 1110 1001 1001 1001 1001 1001 1010
+1.0 = 0011 1111 1000 0000 0000 0000 0000 0000
+
+5.9 What is the difference between a big-endian and a little-endian machine? Cite at least one computer architecture of each kind.  How do these architectures affect the values give in Table 5.2?
+
+Big endian machines number bits from left to right.  A IBM POWER is an example of a big endian machine.  The DEC Alpha is a little endian machine which numbers bits right to left.  The bits in table 5.2, depending on which reprsentation, would either be least significant to the left if little endian and vise versa if big endian.
+
+5.14 Consider the C fragment
+
+	char a[20];
+	char b[20];
+
+a = b could possibly mean copying string b to a.  Or assigning pointer b to pointer a depending on whether or not the variables were declared as pointers.
+
+5.19 Define an EBNF and abstract syntax for adding record structures to Clite.  The EBNF for a structure reference should use the "dot" notation discussed in this chapter.  The concrete and abstract syntax of Declaration, Expression, and Assignement should be modified.
+
+Record = Assignment { Declaration }
+
+This style would allow
+
+Assignment
+ VariableRef 
+  Variable
+   myRecord
+    Declaration
+      VariableDecl
+        v1
+        int
+    Declaration
+       VariableDecl
+	v2
+	int
+etc.

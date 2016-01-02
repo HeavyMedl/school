@@ -1,0 +1,170 @@
+Kurt Medley -- PLD Winter Final
+
+ 1. Give the type constraints generated for the following program fragment written in the
+language defined in the Cardelli paper (assume the type environment given on p. 7):
+
+1 	let rec FIB =
+2	fun(n)
+3	if ZERO(n) then
+4		1
+5	else
+6		if ZERO(PRED(n)) then
+7			1
+8		else FIB(PRED(n)) + FIB(PRED(PRED(n)))
+9			in
+10			FIB(3)
+
+Type Environment
+
+true, false	: bool
+0,1,.		: int
+succ, pred	: int -> int
+zero		: int -> bool
+pair		: a -> (b -> (a x b))
+fst		: (a x b) -> a
+snd 		: (a x b) -> b
+nil		: a list ([a])
+cons		: (a x a list) -> a list ( (a,[a]) -> [a] )
+hd		: a list -> a
+tl		: a list -> a list
+null		: a list -> bool
+
+The system of type constraints for FIB is:
+
+The type of fib is int -> int
+
+	Predefined in Type environment
+[1] 	zero	: int -> bool
+[2]	1	: int
+[3]	pred	: int -> int
+[4]	3	: int
+
+	Conditional constructs
+[5]	zero			: bool	-- result of test must be boolean
+[6]	1					: a
+[7]	fib(pred(n))+fib(pred(pred(n)))		: a
+[9]	if zero(pred(n)) then 1
+	else fib(pred(n))+fib(pred(pred(n))) 	: a
+	
+	Function Applications
+[10]	zero	: b -> c
+[11]	n	: b
+[12]	zero(n)	: c
+
+[13]	zero		: d -> e
+[14] 	pred(n)		: d
+[15] 	zero(pred(n))	: e
+
+[16]	fib			: f -> g
+[17]	pred(n)			: f
+[18]	fib(pred(n))		: g
+
+[19]	fib			: h -> i
+[20]	pred(pred(n))		: h
+[21] 	fib(pred(pred(n)))	: i
+
+	[16 - 21] Unify fib(pred(n)) + fib(pred(pred(n))) : a
+
+[22]	n					: j
+[23]	if zero(pred(n)) then 1
+	else fib(pred(n))+fib(pred(pred(n)))	: k
+[24]	fun(n) if zero(pred(n)) then 1
+	else fib(pred(n))+fib(pred(pred(n)))	: j -> k
+
+[25]	fib					: l
+[26]	fun(n) if zero(pred(n)) then 1
+	else fib(pred(n))+fib(pred(pred(n)))	: l
+
+2. Write the program zip in the lambda calculus. Assume no constants, but you can 'name' your elements. Church lists are encoded as:
+	
+	zip :: [a] -> [b] -> [(a, b)]
+
+	[] 	= \c l -> l
+	Cons	= \h t c l c -> h (t c l)
+
+So if we had the list [a,b,c], we would encode it as:
+
+	\c l c -> a (c b (c 3 l))
+	ie. Cons a (Cons b (Cons c []))
+
+And pairs are implemented as:
+
+	pr = \x y z -> z x y
+
+So the pair (a,b) would be encoded as:
+
+	pr a b = \z -> a b
+
+I took the church encodings from: http://en.wikipedia.org/wiki/Church_encoding.  My working code is defined in lambdaAssn.hs
+
+true = Lam "x" (Lam "y" (Var "x"))
+false = Lam "x" (Lam "y" (Var "y"))
+
+pair = Lam "x" ( Lam "y" ( Lam "z" (App (App (Var "z") (Var "x")) (App (Var "z") (Var "y")))))
+nil  = App (App pair true) true 
+fstl = Lam "p" ( App (Var "p") (Lam "x" (Lam "y" (Var "x")))) 
+sndl = Lam "p" ( App (Var "p") (Lam "x" (Lam "y" (Var "y")))) 
+cons = Lam "h" ( Lam "t" ( App pair (App (App pair (Var "h")) (Var "t")))) 
+headl= Lam "z" ( App fstl ( App sndl (Var "z"))) 
+taill= Lam "z" ( App sndl ( App sndl (Var "z"))) 
+isnil= fstl
+
+r = reduce_all outer
+
+zipL l1 l2 = if (r $ App isnil l1) == true || (r $ App isnil l2) == true then (r $ nil) 
+                else r $ App (App cons (App pair (App (App headl l1) (App headl l2))))
+                        (zipL (App taill l1) (App taill l2)) 
+
+t1 = App (App cons one) nil 
+t2 = zipL t1 t1 
+
+zip' :: [a] -> [b] -> [(a,b)]
+zip' xs [] = []
+zip' [] ys = []
+zip' (x:xs) (y:ys) = (x,y) : zip' xs ys
+
+In the scala implementation of the lambda calculus, augment the language to include constants Pr, Fst, Snd.  You will have to add delta rules to the reduce function.  Give a sample run of your changes to demonstrate that, if p is a pair such as (Pr(Var(x))(Var(y))), then reduce(Fst p) will give us Var(x).
+
+I'm not sure if you wanted me to define these in a new ADT "Constant" or just define them globally.  So I defined them globally.  My scala code will be located in my lab file, ScalaFun.scala.  I used 1:1 translations from the haskell defintions I implemented above.
+
+val fstl = Abs("p", App(Var("p"), Abs("x", Abs("y", (Var("x"))))))
+val sndl = Abs("p", App(Var("p"), Abs("x", Abs("y", (Var("y"))))))
+val pair = Abs("x", Abs("y", Abs("z", App(App(Var("z"),Var("x")), App(Var("z"),(Var("y")))))))
+
+/*
+
+scala> reduce(reduce(App(App(pair,one),one)))
+res1: Term = Abs(z,App(App(Var(z),Abs(f,Abs(x,App(Var(f),Var(x))))),App(Var(z),Abs(f,Abs(x,App(Var(f),Var(x)))))))
+
+scala> App(App(pair,Var("x")),Var("y"))
+res4: App = App(App(Abs(x,Abs(y,Abs(z,App(App(Var(z),Var(x)),App(Var(z),Var(y)))))),Var(x)),Var(y))
+
+scala> reduce(reduce(reduce(App(App(pair,Var("x")),Var("y")))))
+res3: Term = Abs(z,App(App(Var(z),Var(x)),App(Var(z),Var(y))))
+
+*/
+
+val pair1 = App(App(pair,Var("x")),Var("y"))
+val app1 = App(fstl,pair1)
+
+/* Application of fstl on a pair(Var("x"),Var("y")) should return Var("x")
+
+scala> reduce(app1)
+res0: Term = App(App(App(Abs(x,Abs(y,Abs(z,App(App(Var(z),Var(x)),App(Var(z),Var(y)))))),Var(x)),Var(y)),Abs(x,Abs(y,Var(x))))
+
+scala> reduce(reduce(app1))
+res1: Term = App(App(Abs(y,Abs(z,App(App(Var(z),Var(x)),App(Var(z),Var(y))))),Var(y)),Abs(x,Abs(y,Var(x))))
+
+scala> reduce(reduce(reduce(app1)))
+res2: Term = App(Abs(z,App(App(Var(z),Var(x)),App(Var(z),Var(y)))),Abs(x,Abs(y,Var(x))))
+
+scala> reduce(reduce(reduce(reduce(app1))))
+res3: Term = App(App(Abs(x,Abs(y,Var(x))),Var(x)),App(Abs(x,Abs(y,Var(x))),Var(y)))
+
+scala> reduce(reduce(reduce(reduce(reduce(app1)))))
+res4: Term = App(Abs(y,Var(x)),Abs(x',Var(y)))
+
+scala> reduce(reduce(reduce(reduce(reduce(reduce(app1))))))
+res5: Term = Var(x)
+
+*/

@@ -1,0 +1,25 @@
+public class SequenceDemo
+{
+  public static void main(String[]args)
+  {
+    final int[] citypop = {1000,5666,1345,6534,6345,83456,134234,634578,
+      5734, 5623, 7345, 45635, 63488, 734577 };
+    Sequence mycity = new mySequence(citypop);
+    LastDigitDistribution dist1 = new LastDigitDistribution();
+    dist1.process(mycity, 1000);
+    dist1.display();
+    System.out.println();
+  }
+}
+      
+    //System.out.println();
+    //LastDigitDistribution dist1 = new LastDigitDistribution();
+    //dist1.process(new SquareSequence(), 1000);
+    //dist1.display();
+    //System.out.println();
+    
+    //LastDigitDistribution dist2 = new LastDigitDistribution();
+    //dist2.process(new RandomSequence(), 1000);
+    //dist2.display();
+    //System.out.println();
+  

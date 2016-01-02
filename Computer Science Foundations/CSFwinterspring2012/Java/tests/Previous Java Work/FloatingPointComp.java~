@@ -1,0 +1,23 @@
+public class FloatingPointComp
+{
+  final double EPSILON = 1E-14;
+  private double firstfloat;
+  private double secondfloat;
+  
+  public FloatingPointComp(double aNum, double aaNum)
+  {
+    firstfloat = aNum;
+    secondfloat = aaNum;
+  }
+  
+  public void getCompare()
+  {
+    String same = "They are the same when rounded to two decimal places.";
+    String differless = "They differ by less than 0.01";
+    String different = "They are different when rounded to two decimal places.";
+    if (Abs(firstfloat - secondfloat) < 0.01) {
+      return same && differless; }
+    else
+      return different && differless;
+  }
+}

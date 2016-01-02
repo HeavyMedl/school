@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class PairTester
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    
+    Pair thepair = new Pair();
+    System.out.print("Enter first number:  ");
+    double numberOne = in.nextDouble();
+    
+    System.out.print("Enter second number:  ");
+    double numberTwo = in.nextDouble();
+    
+    System

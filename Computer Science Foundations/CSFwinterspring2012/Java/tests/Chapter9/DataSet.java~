@@ -1,0 +1,44 @@
+ /** A class usable for analyzing objects of any class that implements the
+   * Measurable interface
+   **/
+
+public class DataSet implements Comparable {
+  private double sum;
+  private Measurable maximum;
+  private Measurable minimum;
+  private int count;
+  
+  public int compareTo(Object obj) {
+    if (this.maximum == ((DataSet) obj).maximum ||
+        this.minimum == ((DataSet) obj).minimum)
+      return 0;
+    else if ((this.maximum.getMeasure()) > ((DataSet) obj).maximum.getMeasure() ||
+             ((this.minimum.getMeasure()) > ((DataSet) obj).minimum.getMeasure()))
+      return 1;
+    else
+      return -1;
+  }
+               
+  void add(Measurable x) {
+    sum = sum + x.getMeasure();
+    if (count == 0 || maximum.getMeasure() < x.getMeasure()) {
+      maximum = x; }
+    if (count == 0 || minimum.getMeasure() > x.getMeasure()) {
+      minimum = x; }
+    count++;
+  }
+  
+  public Measurable getMinimum() {
+    return minimum;
+  }
+  
+  public Measurable getMaximum() {
+    return maximum;
+  }
+  
+  public double getAverage() {
+    sum = sum / count;
+    return sum;
+  }
+}
+                    

@@ -1,0 +1,9 @@
+graph BFS {
+	rankdir=LR;
+	size="8,5"
+	node [shape = circle];
+	S0null -- A; S0null -- B; A -- E; A -- C; B -- C; B -- D; C -- E;
+	C -- H; D -- G; E -- F; F -- H; G -- J; H -- I; I -- J;
+	K -- L; K -- M; L -- M;
+}
+

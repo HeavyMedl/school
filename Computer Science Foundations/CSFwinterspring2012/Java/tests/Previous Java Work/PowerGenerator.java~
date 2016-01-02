@@ -1,0 +1,20 @@
+public class PowerGenerator
+{
+  private double factor;
+  
+  public PowerGenerator(double aFactor)
+  {
+    factor = aFactor;
+  }
+  public double nextPower()
+  {
+    for (int i = 0; i < 13; i++) {
+      if (i == 0) {
+        factor = factor; }
+      else if (i > 0) {
+        facotr = factor * 10; }
+    }
+  }
+}
+  
+    

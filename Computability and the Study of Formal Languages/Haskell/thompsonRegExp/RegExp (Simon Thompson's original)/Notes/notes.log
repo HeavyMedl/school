@@ -1,0 +1,222 @@
+This is TeX, Version 3.14159 (Web2C 7.2) (format=latex 1998.6.1)  19 JAN 2000 17:52
+**notes
+(notes.tex
+LaTeX2e <1997/12/01> patch level 2
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/base/article.cls
+Document Class: article 1997/10/10 v1.3x Standard LaTeX document class
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 1997/10/10 v1.3x Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/home/cur/sjt/latexstuff/bin2e/sjtFonts.sty)
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/epsfig.sty
+Package: epsfig 1996/10/04 v1.7 (e)psfig emulation (SPQR)
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1997/06/09 v1.0d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1997/11/10 v1.10 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1997/09/09 v1.0f Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+)
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 84.
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1997/09/09 v3.0e Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (notes.aux)
+\openout1 = `notes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 11.
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/new-fonts/psfonts/adobe/times/tex/
+ot1ptm.fd
+File: ot1ptm.fd 1998/05/28 Fontinst v1.7 font definitions for OT1/ptm.
+) (/home/cur/sjt/latexstuff/bin2e/defs1.tex
+\c@exnum=\count87
+\c@theorem=\count88
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 70.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+ (notes.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+)
+\tf@toc=\write3
+\openout3 = `notes.toc'.
+
+ [1
+
+]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 126.
+
+
+(/usr/local/cs/pkg/tex/share/texmf/tex/latex/new-fonts/psfonts/adobe/times/tex/
+omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 136.
+
+Overfull \hbox (2.09453pt too wide) in paragraph at lines 135--144
+[] 
+ []
+
+[2]
+Overfull \hbox (4.70055pt too wide) in paragraph at lines 146--149
+\OT1/ptm/m/n/10.95 Examples of reg-u-lar ex-pres-sions in-clude \OT1/cmtt/m/n/1
+0.95 (a|(ba))\OT1/ptm/m/n/10.95 , \OT1/cmtt/m/n/10.95 ((ba)|($\OML/cmm/m/it/10.
+95 "$\OT1/cmtt/m/n/10.95 |(a)*)) \OT1/ptm/m/n/10.95 and \OT1/cmtt/m/n/10.95 hel
+lo\OT1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 195--195
+[]\OT1/cmtt/m/n/10.95 a `Or` (a `Then` b)    (a `Then` b) `Or` (Epsilon `Or` (S
+tar a))[] 
+ []
+
+[3]
+Overfull \hbox (17.32205pt too wide) in paragraph at lines 234--237
+\OT1/ptm/m/n/10.95 1. Write a more read-able form of the ex-pres-sion \OT1/cmtt
+/m/n/10.95 ((((a|b)|c)((a)*|(b)*))(c|d))\OT1/ptm/m/n/10.95 . 
+ []
+
+[4] [5] [6]
+Overfull \hbox (30.91077pt too wide) in paragraph at lines 391--391
+[]  \OT1/cmtt/m/n/10.95 setlimit             -- Eq a => (Set a -> Set a) -> Set
+ a -> Set a[] 
+ []
+
+[7] [8] [9] [10]
+Overfull \hbox (1.23682pt too wide) in paragraph at lines 579--584
+\OT1/ptm/m/n/10.95 7. De-fine the func-tion \OT1/cmtt/m/n/10.95 powerSet :: ...
+ => Set a -> Set (Set a) \OT1/ptm/m/n/10.95 which
+ []
+
+[11]
+File: pic1.ps Graphic file (type eps)
+ <pic1.ps> [12]
+File: pic2.ps Graphic file (type eps)
+ <pic2.ps> [13]
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 753
+.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 753.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 753.
+
+[14]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 781.
+ [15]
+Overfull \hbox (3.25105pt too wide) in paragraph at lines 814--818
+\OT1/ptm/m/n/10.95 sim-i-larly \OT1/cmtt/m/n/10.95 startset \OT1/ptm/m/n/10.95 
+is de-rived from the ma-chine \OT1/cmtt/m/n/10.95 mach\OT1/ptm/m/n/10.95 , us-i
+ng the func-tions \OT1/cmtt/m/n/10.95 closure
+ []
+
+[16]
+File: pic4.ps Graphic file (type eps)
+ <pic4.ps>
+Overfull \hbox (10.38376pt too wide) in paragraph at lines 864--864
+ [] 
+ []
+
+File: pic5.ps Graphic file (type eps)
+<pic5.ps> [17]
+File: pic3.ps Graphic file (type eps)
+ <pic3.ps>
+File: pic6.ps Graphic file (type eps)
+ <pic6.ps> [18] [19]
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 997--997
+[]                       \OT1/cmtt/m/n/10.95 Emove m1 (m1+m2+1) , Emove (m1+m2)
+ (m1+m2+1) ][] 
+ []
+
+[20] [21]
+File: pic7a.ps Graphic file (type eps)
+ <pic7a.ps> [22]
+File: pic7b.ps Graphic file (type eps)
+ <pic7b.ps>
+File: pic7c.ps Graphic file (type eps)
+ <pic7c.ps> [23] [24]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 1176--1176
+[]     \OT1/cmtt/m/n/10.95 | empty /= (term `inter` new)    = finish `union` (s
+ing new)[] 
+ []
+
+[25]
+File: pic8.ps Graphic file (type eps)
+ <pic8.ps>
+File: pic9.ps Graphic file (type eps)
+ <pic9.ps> [26]
+File: pic10.ps Graphic file (type eps)
+ <pic10.ps> [27]
+File: pic11.ps Graphic file (type eps)
+ <pic11.ps>
+File: pic12.ps Graphic file (type eps)
+ <pic12.ps> [28]
+[29] (notes.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 829 strings out of 10982
+ 8557 string characters out of 73465
+ 55060 words of memory out of 263001
+ 3711 multiletter control sequences out of 10000+0
+ 11929 words of font info for 37 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 32i,10n,21p,211b,338s stack positions out of 300i,100n,500p,30000b,4000s
+
+Output written on notes.dvi (29 pages, 53604 bytes).

@@ -1,0 +1,27 @@
+public class Coin1 implements Comparable<Coin1>
+{
+  private double value;
+  private String name;
+  
+  public Coin1(double aValue, String aName) {
+    value = aValue;
+    name = aName;
+  }
+  
+  public String getName() {
+    return name;
+  }
+  public double getValue() {
+    return value;
+  }
+  
+  public int compareTo(Coin1 obj) {
+    if (this.getName().equalsIgnoreCase(obj.getName())) {
+      return 0; }
+    else if (this.getName().length() > obj.getName().length()) {
+      return 1; }
+    else {
+      return -1; }
+  }
+}
+        

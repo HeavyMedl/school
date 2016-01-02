@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DataAnalyzer
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    DataSet2 data = new DataSet();
+    
+    double n;
+    double sum = 0;
+    while (in.hasNextDouble())
+    {
+      System.out.print("Enter value, Q to quit: ");
+      String input = in.next();
+      
+      if (in.nextDouble()) {
+       n = in.nextDouble();
+       sum = sum + n; }
+      else 
+        input.equalsIgnoreCase("Q") }
+  }
+}

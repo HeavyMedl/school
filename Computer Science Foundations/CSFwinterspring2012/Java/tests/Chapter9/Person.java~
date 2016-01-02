@@ -1,0 +1,16 @@
+public class Person
+{
+  private int height;
+  private String name;
+  
+  public class Person(String aName, int aHeight) {
+    name = aName;
+    height = aHeight;
+  }
+  public String getName() {
+    return name;
+  }
+  public int getHeight() {
+    return height;
+  }
+}

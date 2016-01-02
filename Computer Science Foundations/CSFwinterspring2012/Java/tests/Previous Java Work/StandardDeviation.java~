@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class StandardDeviation {
+  private double sum;
+  private double sqsum;
+  
+  public StandardDeviation(double [])
+  {
+    sum = 0;
+    sqsum = 0;
+  }
+  
+  public static void main(String[] args)
+  {
+    Scanner s = new Scanner(System.in);
+    
+    double d;
+    int n = 0;
+    d = s.nextDouble();
+    
+    while (d > 0) {
+      sum = sum + d;
+      sqsum = sqsum + d * d;
+      n++; }
+    
+    // Implement the standard deviation
+    
+    double standarddeviation = Math.sqrt(sqsum - 1/n * (sum * sum) / (n-1))

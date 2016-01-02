@@ -1,0 +1,17 @@
+public class LeapYear
+{
+  private int year
+  {
+    public LeapYear(int aYear) {
+      year = aYear;
+    }
+    
+    public boolean isLeapYear() {
+      String leapyear;
+      if (year / 4 || year / 400)
+        return > 0;
+      else if (year / 100)
+        return < 0;
+    }
+  }
+        

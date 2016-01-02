@@ -1,0 +1,26 @@
+import java.util.Random;
+
+public class Die 
+{
+  private Random genenrator;
+  private int sides;
+  
+  public Die(int s) 
+  {
+    sides = s;
+    generator = new Random();
+  }
+  
+  public int cast() {
+    return 1 + generator.nextInt(sides);
+  }
+  
+  public static void main(String[] args)
+  {
+    Die aDie = new Die(6);
+    final int TRIES = 10;
+    for (int i = 0; i < TRIES; int++) {
+      System.out.print(aDie.cast() + " ");
+    }
+  }
+}

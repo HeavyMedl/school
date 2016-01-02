@@ -1,0 +1,10 @@
+public class Counter 
+{
+  private int value;
+  
+  public Counter(int initialValue) { value = initialValue; }
+  
+  public void count() { value = value + 1; }
+  public int getValue() { return value; }
+  
+}

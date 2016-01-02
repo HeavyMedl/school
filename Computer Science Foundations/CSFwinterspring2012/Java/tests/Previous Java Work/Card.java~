@@ -1,0 +1,21 @@
+public class Card
+{
+  private static final string A = "Ace";
+  private static final string K = "King";
+  private static final string J = "Jack";
+  private static final string Q = "Queen";
+  private static final string D = "Diamonds";
+  private static final string H = "Hearts";
+  private static final string S = "Spades";
+  private static final string C = "Clubs";
+  
+  private int cardnumber;
+  private string cardtype;
+  
+  public Card(int x, string c)
+  {
+    cardnumber = x;
+    cardtype = c;
+  }
+  
+}

@@ -1,0 +1,66 @@
+Assignment 4 -- 4.1, 4.2, 4.3, 4.5, 4.6
+Kurt Medley
+
+4.1 Pick one of the following languages: Python, Module, Ada, C#, or Perl.  After consulting an authoritative reference, discuss each of the following requirements for that language:
+(a) Declaration before use.
+	In most C based languages, declaration of variables must happen before usage. 
+(b) Overloading of operators for programmer-defined types.
+	You cannot overload operators for user defined types. 
+(c) Binding time of array size.
+	Malloc allocates a block of size bytes of memory, returning a pointer to the beginning of the block.
+	This is considered dynamically bound. Array size is alternatively bound at compile time.
+(d) What constitutes a scope.
+	Scope is a reference to variables/functions declared within a program and their visibility
+	and usability through-out the program.
+(e) Location of a declaration within a scope.
+	In a programming language like Java, for/each control structures usually define variables within
+	their looping structure.  This internal variable may not be used outside of the loop.  Therefore
+	the scope of a variable may differ based on the location by which it is declared.
+
+4.2 Global variables in C
+(a) How can they be accessed in other compilation units?
+	Names are declared in a header file.  The keyword, "extern" indicates that a name is declared
+	outside of a header file.
+(b) How can global variables be hidden from other compilation units?
+	Global variables in C can be hidden by declaring them static.  Global variables declared static
+	are then only local to the script they're written in.  Instance variables in Java are similar, their
+	scope can be limited by the static keyword - otherwise they can be accessed by the classes that
+	extend the parent file using the .super keyword.
+(c) Why would you want to hide global variables?
+	Hiding global variables encapsulates (to some extent) "unuseful" information to the implementation.
+	It can be seen as a way of sharing private methods/variables amongst related compilation units.
+
+4.3 C and C++ distinguish between declarations and defintions.  What is the distinction? Give an example of each.
+	First of all, declarations create memory locations.  Functions are declared and the definitions that
+	describe them are then allocated memory. 
+	
+	Java iterative
+	void sum(int n) {
+		int a; 
+		for(int i = 0; i < n; i++) { 
+			a = a + i;
+		}
+	}
+	
+	Haskell recursive
+	sum 0 = 0
+	sum n = n + sum (n-1)
+
+	sum is a function that, given an integer n, will add sequentially the numbers up to n.  Memory
+	is allocated when the function is executed.  The definition of the function (in Java) is followed
+	after the name is declared and the square bracket is used.  Haskell alternatively does not allocate
+	memory for a function as there is no state.
+
+
+4.5 Most programming languages prohibit redeclaring the same variable name within the same scope.
+(a) Explain why types alone cannot be used to distinguish such a duplication.
+	Clearly defining two different variables with duplicate definitions would not be a sufficient
+	grounds for such duplication.  Coercing a value that was declared int and float by a parser
+	would be impossible.
+(b) What is the difference between this restriction and this absence of such a restriction for overloaded functions?
+	Overloading functions is permissable because of the context of their arguments.  f(int a) is a
+	different function than f(float a); as the function works on two different primitive types.
+
+4.6 For the language C, give three examples of r-vaules that cannot be l-values, Give three more examples of l-values.  Are there l-values that cannot be r-values? Explain.
+	R-values cannot be L-values.  Literals, functions, expressions.  L-values are scripted names,
+	pointers, and pointer references.  L-values can be R-values. 

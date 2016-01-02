@@ -1,0 +1,29 @@
+public class BankingAccount
+{
+  private double balance;
+  
+  public BankingAccount()
+  {
+    balance = 0;
+  }
+  
+  public BankingAccount(double initialValue)
+  {
+    balance = initialValue;
+  }
+  
+  public void deposit(double amount)
+  {
+    balance = balance + amount;
+  }
+  
+  public void withdraw(double amount)
+  {
+    balance = balance - amount;
+  }
+  
+  public double getBalance()
+  {
+    return balance;
+  }
+}

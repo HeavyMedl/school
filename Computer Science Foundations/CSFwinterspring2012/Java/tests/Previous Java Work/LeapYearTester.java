@@ -1,0 +1,8 @@
+public class LeapYearTester
+{
+  public static void main(String[] args)
+  {
+    LeapYear eighty = new LeapYear(1980);
+    System.out.println(eighty.isLeapYear());
+  }
+}

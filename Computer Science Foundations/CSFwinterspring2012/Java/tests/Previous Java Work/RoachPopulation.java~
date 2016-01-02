@@ -1,0 +1,44 @@
+public class RoachPopulation
+{
+  private double population;
+  
+  public RoachPopulation()
+  {
+    population = 0;
+  }
+  
+  public RoachPopulation(double initialpopulation)
+  {
+    population = initialpopulation;
+  }
+  
+  public void breed()
+  {
+    double populationdouble = population * 2;
+    population = populationdouble;
+    return population;
+  }
+  
+  public void spray()
+  {
+    double tenpercent = population * (10 / 100);
+    population = population - tenpercent;
+    return population;
+  }
+  
+  public getRoaches()
+  {
+    return population;
+  }
+  
+  public static void main(String [] args)
+  {
+    RoachPopulation roachsimulation = new RoachPopulation(10);
+    System.out.println(roachsimulation);
+  }
+}
+  }
+    
+    
+    
+    

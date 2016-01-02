@@ -1,0 +1,59 @@
+public class DataSet
+{
+  private double total;
+  private int count;
+  private double x1;
+  private double x2;
+  private double x3;
+  private double x4;
+  private double x5;
+  
+  public DataSet()
+  {
+    total = 0;
+    count = 0;
+    x1 = 0;
+    x2 = 0;
+    x3 = 0;
+    x4 = 0;
+    x5 = 0;
+  }
+  
+  public DataSet(double x1, double x2, double x3, double x4, double x5)
+  {
+    total = x1 + x2 + x3 + x4 + x5;
+  }
+  
+  public double addValue(double x)
+  {
+    total = (x + x1) + (x + x2) + (x + x3) + (x + x4) + (x + x5);
+    count++;
+    return total;
+  }
+  
+  public double getSum()
+  {
+    count = 0;
+    return total;
+  }
+  
+  public double getAverage()
+  {
+    total = total / 2;
+    count++;
+    return total;
+  }
+  
+  public int getCount()
+  {
+    return count;
+  }
+  
+  public static void main(String[] args)
+  {
+    DataSet sequence = new DataSet(1,2,3,4,5);
+    System.out.println("Total: " + sequence.getSum());
+    System.out.println("Add Value: " + sequence.addValue(5));
+    System.out.println(sequence.getSum());
+  }
+}

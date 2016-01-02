@@ -1,0 +1,24 @@
+public class CashRegister2tester
+{
+  public static void main(String [] args) {
+   
+    final double QUARTER_VALUE = 0.25;
+    final double DOLLAR_VALUE = 1.0;
+    final double NICKEL_VALUE = 0.05;
+    final double DIME_VALUE = 0.10;
+    
+    
+    CashRegister2 register = new CashRegister2();
+    register.recordPurchase(50.75);
+    
+    System.out.println("Items Sold: " + register.getItems());
+    
+    register.enterPayment(60, new Coin(DOLLAR_VALUE, "dollar"));
+    register.enterPayment(5, new Coin(QUARTER_VALUE, "quarter"));
+    register.enterPayment(20, new Coin(NICKEL_VALUE, "nickel"));
+    System.out.println("Change: " + register.giveChange());
+    
+    register.enterPayment(5, new Coin(QUARTER_VALUE, "quarter"));
+
+  }
+}

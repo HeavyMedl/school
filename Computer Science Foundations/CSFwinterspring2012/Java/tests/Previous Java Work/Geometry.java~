@@ -1,0 +1,10 @@
+import java.awt.Rectangle;
+
+public class Geometry 
+{
+  public static double area(Rectangle rect)
+  {
+    return rect.getWidth() * rect.getHeight();
+  }
+  
+}

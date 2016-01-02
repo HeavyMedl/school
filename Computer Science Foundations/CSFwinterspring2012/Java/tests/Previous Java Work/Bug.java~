@@ -1,0 +1,17 @@
+// methods
+
+public class Bug
+{
+  private double bugPosition
+  
+  public Bug()
+  {
+    bugPosition = 10;
+  }
+  
+  public Bug(int initialposition)
+  {
+    initialposition = bugPosition;
+  }
+}
+  

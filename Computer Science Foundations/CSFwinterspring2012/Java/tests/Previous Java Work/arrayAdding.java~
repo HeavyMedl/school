@@ -1,0 +1,21 @@
+public class arrayAdding
+{
+  private int sum;
+  private int count;
+  
+  public arrayAdding(int aSum) {
+    sum = aSum;
+    count = 0;
+    double[] values = new double[10];
+  }
+  
+  public void add(double... values) {
+    for (int i = 0; i < values.length; i++) 
+    {
+      double x = values[i];
+      sum = sum + x;
+      count++; }
+  }
+}
+    ;
+    

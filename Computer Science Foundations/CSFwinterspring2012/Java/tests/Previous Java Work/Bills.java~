@@ -1,0 +1,15 @@
+public class Bills
+{
+  private int value;
+  private String name;
+  
+  public Bills(int aValue, String aName) {
+    value = aValue;
+    name = aName;
+  }
+  
+  public int getValue() {
+    return value;
+  }
+}
+    

@@ -1,0 +1,15 @@
+package tests.money;
+public class Bill
+{
+  private int value;
+  private String name;
+  
+  public Bill(int aValue, String aName) {
+    value = aValue;
+    name = aName;
+  }
+  
+  public int getValue() {
+    return value;
+  }
+}

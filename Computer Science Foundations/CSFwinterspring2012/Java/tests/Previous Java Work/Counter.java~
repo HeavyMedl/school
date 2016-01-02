@@ -1,0 +1,6 @@
+public class Counter {
+  Counter tally = new Counter();
+  tally.count();
+  tally.count();
+  int result = tally.getValue(); // Set result to 2
+}

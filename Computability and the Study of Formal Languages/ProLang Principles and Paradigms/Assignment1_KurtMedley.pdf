@@ -1,0 +1,63 @@
+Ch 1 Exercises
+Kurt Medley
+
+1.1 
+a) Eiffel is an object oriented programming language based on a set of principles "design by contract", "command-query separation", the "uniform-access principle", the "single-choice" principle, the "open-closed" principle and the "option-operand separation".  It had feature implementations that eventually migrated into Java, C#, etc.  Originally developed by Eiffel Software, founded by Bertrand Meyer.  Concepts like multiple inheritance, polymorphism and parameter covariance. Eiffel encouraged user-designed module development for reusage.
+
+b) Perl is a general-purpose dynamic programming language.  Perl was designed as a general-purpose Unix scripting language.  Perl borrows features from other languages like C and AWK.  Perl is used for graphics programming, system admininstration, network programming, finance, bioinformatics, etc.
+
+c) Python is a general-purpose programming language whose design emphasizes code readability.  Python supports multiple programming paradigms, primarily OO, imperative, and functional programming styles.  Python uses dynamic typing and a combination of reference counting and cycle detecting garbage collector for memory management.
+
+1.2
+
+/** An ambigious add method that takes two parameters (a,b) and sums up a + b until the upperbound b (which is also a provided parameter) is reached by the for loop **/
+
+public int add(int a, int b) {
+	int n = 0;
+	for (int i; i < b; i++) {
+		n += a + b;
+		}
+	return n;
+	}
+
+This naming convention makes this code partially unreadable.
+
+public int sumABuntilB { ... }
+
+is a slightly better naming convention for the functionality of the defined method.
+
+1.3
+a) Algol, given its naming conventions, syntactic organization and semantics was much more suited to the computer scientist Dijkstra.  Juxtaposed to BASIC and COBOL, it is clear that the algorithmic processing structures posed by Algol would be more suited to Dijkstra's domain in computer science.
+
+b) I don't believe that programmers are inherently inept.  The problem with programming language design is that the variablity in solving specific problems can be visualized and implemented an inumerable amount of ways.  Thus, we are forced, as a collective, to adopt structures that are simple and elegant to solve problems with specific domains.
+
+1.4
+A feature of orthogonality within Java is the passing of objects as parameters.  In turn, these objects can be inherited from other classes. 
+
+public class Person {
+
+	String name;
+	Int age;
+
+	public Person(String aName, Int aAge) {
+		name = aName;
+		age = aAge;
+	}
+ }
+----
+public class Kurt extends Person {
+
+	public Kurt(String aName, Int aAge) {
+	super(aName, aAge);
+
+	public static void main(String[] args) {
+	Kurt theperson = new Kurt("Kurt",24);
+}
+
+where Kurt inherits the super class instance variables.
+An example of a non-orthogonal feature is Java's inability to pass an array structure as a parameter in arithmetic operations where entire arrays can be analyzed just by calling their formalities ie [0..n]
+
+1.10
+Design Goals: Simplicity and readability, Clarity about binding, Reliability, Support, Abstraction, Orthoganality, Efficient implementation.
+
+Simplicity in regards to readability goes to Haskell, as once something has finally been written, it is easy to interpret. Simplicity goes to Java, although this is a subjective inference based on my limited exposure to functional programming.  Late binding and early binding have no effect on my experience in programming.  I'm used to late binding and eager compilation, but am not opposed to lazy evaluation/binding.  I prefer the type checking in Haskell, although frusterating at times, so reliability goes to Haskell.  Java is less reliable because of the coercion of so many different things and thus the type checking is then effected.  Support for Java greatly outweighs the support for Haskell because of its more general purpose functionality, as opposed to the narrower scope of Haskell. I enjoy both Haskell's procedural functions that can be imported, as well as Java's vast libraries that can be used for design processes.  Orthoganality, based on Haskell's domain and scope, Haskell's orthoganality is superior.  Java takes a slight lead in efficient implementation for me, as the abstraction level in complex functions is still beyond me.

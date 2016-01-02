@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class StringSorterTester
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    
+    StringSorterTester threestrings = new StringSorter();
+    System.out.print("Enter First Name:  ");
+    String firstname = in.nextLine();
+    
+    System.out.print("Enter Second Name:  ");
+    String secondname = in.nextLine();
+    
+    System.out.print("Enter Third name:  ");
+    String thirdname = in.nextLine();
+    
+    System.out.println("First: " + threestrings.getFirst());
+    System.out.println("Second: " + threestrings.getSecond());
+    System.out.println("Third: " + threestrings.getThird());
+  }
+}

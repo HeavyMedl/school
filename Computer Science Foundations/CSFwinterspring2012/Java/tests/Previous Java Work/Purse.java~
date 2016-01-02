@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class Purse
+{
+  private ArrayList<String> coins;
+  
+  public Purse()
+  {
+    coins = new ArrayList<String>();
+  }
+  
+  public void addCoin(String coinName)
+  {
+    coins.add(coinName);
+  }
+  
+  public String toString()
+  {
+    if (coins.size() == 0)
+      return "Purse[]";
+    
+    String output = "Purse[";
+    
+    for (String coinname : coins)
+    {
+      output = output + coinname + ",";
+    }
+    
+    output = output.substring(0, output.length() - 1);
+    return output + "]";
+  }
+}

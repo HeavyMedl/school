@@ -1,0 +1,12 @@
+public class Numeric
+{
+  public static double intPower(double x, int n)
+  {
+    if (n > 0) {
+      return 1 / (Math.pow(x, -n); }
+    else if (n > 0 && n % 2 == 0) {
+      return Math.pow(Math.pow(x,n/2),2) }
+    else if (n > 0 && n % 2 == 1) {
+      return x * Math.pow(x, n-1) }
+    }
+}

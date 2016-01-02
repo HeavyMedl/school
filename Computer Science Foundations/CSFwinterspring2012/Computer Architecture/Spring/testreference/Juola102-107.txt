@@ -1,0 +1,66 @@
+10.2 Classes and Inheritance
+- A large system can be built with relative ease as a collection of interacting objects
+- Objects are usually grouped into classes of similarly propertied objects.
+- An object is an example or instantiation of a class.
+- One uses the "invokevirtual" instruction which triggers the appropriate method, ex. println, on the appropriate object (System/out) [of the appropriate type (PrintStream)].
+10.2.2 String
+- String supports a wide collection of computational methods that will inspect the String to determine its properties, ex. charAt() method takes an integer and returns the character at the location specified.
+- java/lang/String/charAt(I)C  (taking type I and returning type C).
+- java/lang/String/compareTo(Ljava/lang/String;)I
+10.2.3 Implementing a String
+- Constructor function for String construction: java/lang/String/<init>()V, creates a String of 0 length and with no characters.
+- Duplicate an existing String: java/lang/String/<init>(Ljava/lang/String;)V
+10.3 Class Operations and Methods
+- Classes are defined via .class files.  Fields and methods are defined via jasmin directives at compile time.
+10.3.2 Field Operations
+- Creating fields. Use the directive .field: .field public AnExampleField I, This example creates a field in the current class named AnExampleField, which holds a variable of type int.  Because this field is declared "public", it can be accessed and manipulated by methods that are not themselves part of the current class.
+- The .field directive can be declared "final," meaning that its value cannot be changed from the value set in the field definition.
+- examples:
+- .field public Name Ljava/lang/String; (field holding variable of type String)
+- .field public Year I (field holding variable of type int)
+- .field public BattingAverage F (field holding variable of type float)
+- A field can be declared "static", meaning the field is associated with a class rather than with individual objects within the class.
+- The putfield operation takes the name of the relevant field as an argument. Push the address of the relevant object and the new value, and use the putfield instruction.
+- Use getfield (and getstatic) for retrieving values from fields.
+10.3.3 Methods; Method Introduction
+- Methods are ways of acting on the data stored in the class or its objects.
+- To use a method it must be invoked on an appropriate object or class.
+- Commands to return: ?return which returns the appropriate element of the appropriate type at the top of the stack.
+- invokestatic operation for invoking static methods on classes.
+- Initialization methods have to use the invokespecial instruction.
+10.3.4 Taxonomy of Classes
+- Class variables: properties of the class itself.
+- Instance variables: properties of individual instances.
+- Class variables are declared as static and stored in the class itself, instead of in individual objects.
+- .field color Ljava/lang/String;
+- .field static carLength D
+- The static keyword indicates that the main method is associated with the class, not with any particular instance of the class.
+- "public" indicates that this method (or field) can be accessed from outside the class.
+- "private" method is executable only from objects/methods within the defining class.
+10.4 Objects
+- To create an instance of a class
+- new example
+- invokespecial example/<init>()V
+- invokespecial instruction pops our only reference to the "example" away when it returns
+- Use "dup" instruction
+10.4.2 Destroying Objects
+- Object destruction is handled by the garbage collection system and happens any time no points to an object remain in accessible locations (such as in local variable or on the stack).
+10.4.3 The Type Object
+- java/lang/Object
+- Properties of Objects are basic properties shared by everything in the system.
+10.5 Class Files and .class File Structure
+- A class fiele is stored as a set of nested tables.
+10.5.2 Starting up Classes
+- Primordial class loader: an instantiation of the standard-defined type java.lang.ClassLoader.
+- The primordial loader must also understand enough of the class structure to pull out the superclasses as needed.
+10.6 Class Hierarchy Directives (227-228)
+
+Notes from Lab 1 (Objects and Methods in Jasmin)
+- Memory management essentially means that the JVM provides stack management with local variables and parameters and heap management with garbage collection all in a secure bounds-checking framework. Bounds-checking means a program can't inadvertently or maliciously access information outside of its legitimate memory bounds.
+Object Lifetimes
+- Objects and variables that hold values or object references have distinct categories of lifetimes in the JVM and Java.
+- Object or variable lifetime span of existence is between when it is assigned memory and therby comes into existence, and the time when it goes out of existence because its memory has been deallocated or because, in thecase of an object, there are no longer any refereces to it.
+- Objects or variables with a STATIC lifetime come into existence when program code is loaded and go out of existence when a program has terminated. Static variables in Java have a static lifetime.
+- Objects or variables with a STACK lifetime come into existence when a method is invoked and go out of existence when a method returns. Parameters and local variables have stack lifetime.
+- Objects with a HEAP lifetime exist in a runtime structure called a heap and come into existence when memory is allocated dynamically for the object.  In Java, the "new" keyword signifies heap object creation.  Heap objects go out of existence in Java when there are no more active references to them, at which time they become garbage and are cadidates for garbage collection of the memory they occupy.
+

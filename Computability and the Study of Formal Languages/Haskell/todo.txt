@@ -1,0 +1,13 @@
+HASKELL WEEK 1 READING: 
+CRFP Ch 8.3-8.5 pp181-191
+LYAH Ch 9 on IO Actions (up to Files and Streams)
+CRFP Ch 18.1 pp459-462
+TCOP Typeclassopedia, Introduction
+HASKELL WEEK 1 ASSIGNMENTS: 
+    In CRFP do exercises 18.1 to 18.7 p461 (taken from fall quarter asn9)
+    In CRFP do exercises 8.10 to 8.13 p188 (Note it's Chapter 8 not 18).
+    In CRFP do exercises 8.14 to 8.19 
+FORMAL LANGUAGES WEEK 1 READING: 
+Chapter 6 (Properties of regular languages)
+FORMAL LANGUAGES WEEK 1 ASSIGNMENTS: 
+Chap 6: (p. 217): 1, 2, 5 (p 218): 7, 14 . 24, 27 8,11bc (Use pumping lemma), 20.

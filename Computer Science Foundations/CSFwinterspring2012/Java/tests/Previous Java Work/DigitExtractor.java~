@@ -1,0 +1,16 @@
+public class DigitExtractor
+{
+  private int original;
+  private int reversed;
+  
+  public DigitExtractor (int anInteger)
+  {
+    original = anInteger;
+    reversed = 0;
+  }
+  
+  public int nextDigit()
+  {
+    reversed = (anInteger /10) % 10;
+  }
+}
